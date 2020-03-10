@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { ApiService } from './service/api.service';
-import { Welcome } from './interfaces/album.interface';
 
 @Component({
   selector: 'app-root',
@@ -22,7 +21,6 @@ export class AppComponent {
   ngOnInit(): void {
     this.getAlbums();
   }
-
 
   getAlbums() {
     this._api.getAlbum().subscribe((data: any) => {
