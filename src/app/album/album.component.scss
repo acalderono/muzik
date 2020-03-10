@@ -1,0 +1,45 @@
+h1 {
+  padding: 5px 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#carousel {
+  width: 100%;
+  // height: 150px;
+  overflow: visible;
+  white-space: nowrap;
+  margin: 10px;
+}
+
+#carousel .slide {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.mat-card-header {
+
+  .mat-card-title {
+    // margin-bottom: 20px;
+    font-size: 15px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 180px;
+  }
+  .mat-card-subtitle {
+    font-size: 10px;
+  }
+}
+
+.example-card {
+  max-width: 200px;
+  min-width: 200px;
+}
+
+.rights {
+  font-size: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 180px;
+}

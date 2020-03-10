@@ -1,0 +1,36 @@
+<h1>{{ title ? title : 'Albunes' }}</h1>
+<div id="carousel">
+    <mat-card class="example-card slide" *ngFor="let album of albums">
+        <mat-card-header>
+            <mat-card-title>{{ album['im:name'].label }}</mat-card-title>
+            <mat-card-subtitle>{{ album['im:artist'].label }}</mat-card-subtitle>
+        </mat-card-header>
+        <div *ngFor="let image of album['im:image']">
+            <img mat-card-image *ngIf="image.attributes.height >= 100" [src]="image.label">
+        </div>
+        <mat-card-content>
+            <mat-list>
+                <mat-list-item>
+                    <mat-chip-list aria-label="Fish selection">
+                        <mat-chip> {{ album.category.attributes.label }}</mat-chip>
+                    </mat-chip-list>
+                </mat-list-item>
+                <mat-list-item>
+                    <div class="prices">
+                        {{ album['im:price'].label }}
+                    </div>
+                </mat-list-item>
+                <mat-list-item>
+                    <div class="rights">
+                        {{ album.rights.label }}
+                    </div>
+                </mat-list-item>
+            </mat-list>
+        </mat-card-content>
+        <mat-card-actions align="right">
+            <a mat-button [href]="album.link.attributes.href" target=”_blank”>
+                <mat-icon>open_in_new</mat-icon>
+            </a>
+        </mat-card-actions>
+    </mat-card>
+</div>

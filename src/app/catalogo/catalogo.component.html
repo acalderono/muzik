@@ -1,0 +1,4 @@
+<mat-action-list *ngFor="let catalogo of catalog">
+    <button mat-list-item (click)="onSelectCatalogo(catalogo)"> {{ catalogo }} </button>
+    <mat-divider></mat-divider>
+</mat-action-list>
